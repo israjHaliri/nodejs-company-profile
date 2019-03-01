@@ -1,0 +1,10 @@
+APP_KEY=base64:vKRL/trFTeTLqoBiguChi9XEHbKk1db2O57EaPvi/c4=
+
+NOCAPTCHA_SECRET=[key rechapcha from official web]
+NOCAPTCHA_SITEKEY=[sitekey rechapcha from official web]
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=my email
+MAIL_PASSWORD=my password

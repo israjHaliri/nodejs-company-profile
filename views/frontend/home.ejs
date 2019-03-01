@@ -1,0 +1,142 @@
+<%- include ../header_frontend.ejs %>
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li class="sidebar-brand">
+            <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+        </li>
+        <li>
+            <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+        </li>
+        <li>
+            <a href="#about" onclick = $("#menu-close").click(); >About</a>
+        </li>
+        <li>
+            <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+        </li>
+        <li>
+            <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+        </li>
+        <li>
+            <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+        </li>
+        <li>
+            <a href="/login" >Login</a>
+        </li>
+    </ul>
+</nav>
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <h1>Nice Group<i> Networking</i></h1>
+        <h3>Trusted Multi level &amp; Networking</h3>
+        <br>
+        <a href="#about" class="btn btn-dark btn-lg">Start Now !</a>
+    </div>
+</header>
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Nicenetwork is group of multilevel marketing who trusted every where!</h2>
+                <p class="lead">This Websie contain the information of us.and the next step is <a target="_blank" href="http://www.nicenetwork.cf/">Click here and Join with Us..</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="services" class="services bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Our Services</h2>
+                <hr class="small">
+                <div class="row">
+                    <% for(var i = 0;i < data_services.length;i++) { %>                 
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-link fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong><%= data_services[i].title %></strong>
+                            </h4>
+                            <p><%= data_services[i].description %></p>
+                            <a href="#" class="btn btn-light"><%= data_services[i].date %></a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<aside class="callout">
+    <div class="text-vertical-center">
+        <h1>Vertically Centered Text</h1>
+    </div>
+</aside>
+
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2>Our Work</h2>
+                <hr class="small">
+                <div class="row">
+                    <% for(var i = 0;i < data_about_us.length;i++) { %>   
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img class="img-portfolio img-responsive" src="<%= data_about_us[i].image %>">
+                            </a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<aside class="call-to-action bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>Lets Join Us And Gain Everything !</h3>
+                <a href="#" class="btn btn-lg btn-light"><i class="fa fa-angle-double-up"></i></a>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<section id="contact" class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d15843.724853186544!2d106.95561291448857!3d-6.898830517791091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x2e684908faf773f5%3A0x23273a8abbcdfd35!2sJalan+Cidadap%2C+Limbangan%2C+Sukaraja%2C+Sukabumi%2C+Jawa+Barat!3m2!1d-6.8988518999999995!2d106.9643677!5e0!3m2!1sid!2sid!4v1463827657003" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>Nice</strong><i>Group</i>
+                </h4>
+                <p>Jl. Goalpara Kp. Cidadap Desa Limbangan<br>Sukabumi, CA 43192</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i> 081318941715</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">irinice72@gmail.com</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://web.facebook.com/irnice.sony?_rdr"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                    </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Nicegroup 2014</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<%- include ../footer_frontend.ejs %>

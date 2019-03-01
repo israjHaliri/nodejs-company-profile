@@ -1,0 +1,33 @@
+<%- include ../../header_backend.ejs %>
+<div class="panel panel-default">
+    <div class="panel-heading"><b><i class="fa fa-file"></i>&nbsp;Content</b></div>
+    <div class="panel-body">
+        <table id="table-user" border="1" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th width="5%">No</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th width="20%">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(data.length){ 
+
+                    for(var i = 0;i < data.length;i++) { %>                 
+                    <tr>
+                        <td><%=(i+1)%></td>
+                        <td><%=data[i].title%></td>
+                        <td><%=data[i].date%></td>
+                        <td align="center">
+                            <a class="btn btn-success a-inside edit" href="/backend/content/edit/<%=data[i].id%>"><i class="fa fa-edit"></i>Edit</a>                       
+                            <a class="btn btn-warning a-inside delete" href="/backend/content/delete/<%=data[i].id%>"><i class="fa fa-remove"></i>Delete</a>                       
+                        </td>
+                    </tr>
+                    <% }
+                } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<%- include ../../footer_backend.ejs %>
