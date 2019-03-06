@@ -2,6 +2,11 @@
     + npm
     + node js
     + mysql
+    
+## Technology stacks
+    + npm
+    + node js
+    + mysql
 
 ## Follow this checklist for running
     + create schema testing
